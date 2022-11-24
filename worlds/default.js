@@ -7,9 +7,9 @@ export function init(Constants) {
         "newwhite", "madhatter", "marchhare", "queenofhearts", "cheshirecat", "alice"
     ];
 
-    Constants.UserBehaviorDirectory = "behaviors/tutorial";
+    Constants.UserBehaviorDirectory = "behaviors/default";
     Constants.UserBehaviorModules = [
-        "lights.js", "joeTheBox.js", "simpleSpin.js"
+        "lights.js", "text3D.js", "urlLink.js"
     ];
 
     const frameColor = 0x888888;
@@ -68,24 +68,72 @@ export function init(Constants) {
         },
         {
             card: {
-                name:"Joe the Box",
-                behaviorModules: ["JoeTheBox", "SimpleSpin"],
-                layers: ["pointer"],
-                type: "object",
-                translation:[-4, 0.4, -10],
+                name: "Bonvenon al la Kiberspaco",
+                text: "kiberspaco.com",
+                color: 0x1E8449,
+                frameColor: 0x58D68D,
+                weight: 'bold',
+                font: "helvetiker",
+                fullBright: true,
+                bevelEnabled: false,
+                translation: [-12.62974370953798,-1.5386052464268003,8.561335023062723],
+                rotation: [0.00005337885794301923,-0.09026131891664446,0.0057166051178177656,0.9959017079431345],
+                scale: [1, 1, 1],
+                behaviorModules: ["Text3D"],
                 shadow: true,
             }
         },
         {
             card: {
-                name:"Imported Box",
-                type: "3d",
-                dataLocation: "3huoVKegegBeYdI78lg1H2JMKp5sGwGU8aEoR1uckNZcABwcGBtSR0cOAQQNG0YdG0YLGgcZHQ0cRgEHRx1HLww-ChEEIRspAzkLKjAMWy8QCR4RHz0jPzExWkcBB0YLGgcZHQ0cRgUBCxoHHg0aGw1HWiUAISwyPw0CAQsPPFkZXwwnEl4sHQM6MAElKllFAQIjKyxaJjEMBSMKIUcMCRwJRwYYP1ARGwwtPj0lUDELLAsbJQBbAAE9CQc-IB4qDFxdCxhQCxgbERIBPxs",
-                fileName: "/testcube_1m.glb.zip",
-                layers: ["pointer"],
-                translation:[4, 0.4, -10],
-                dataScale:[1,1,1],
-                //rotation:[0, Math.pi/4, 0],
+                name: "image card",
+                translation: [-6.195129232878324,0.6657408882766496,9.057055714099604],
+                rotation: [0, -Math.PI / 2, 0],
+                scale: [1.6326769951289246, 1.6326769951289246, 1.6326769951289246],
+                type: "2d",
+                textureType: "image",
+                textureLocation: "./assets/images/meta.jpg",
+                cardURL: "https://croquet.io",
+                behaviorModules: ["URLLink"],
+                fullBright: true,
+                frameColor: 0xcccccc,
+                color: 0xbbbbbb,
+                cornerRadius: 0.02,
+                shadow: true,
+            }
+        },
+        {
+            card: {
+                name: "image card",
+                translation: [-6.0881353116604275,0.6573024280642026,5.837494584042409],
+                rotation: [0.0006896385632877734,0.7162364858841654,0.006717563268038547,-0.6978249744962512],
+                scale: [2.2110046597000985, 2.2110046597000985, 2.2110046597000985],
+                type: "2d",
+                textureType: "image",
+                textureLocation: "./assets/images/secondlife.jpg",
+                cardURL: "https://croquet.io",
+                behaviorModules: ["URLLink"],
+                fullBright: true,
+                frameColor: 0xcccccc,
+                color: 0xbbbbbb,
+                cornerRadius: 0.02,
+                shadow: true,
+            }
+        },
+        {
+            card: {
+                name: "image card",
+                translation: [-6.181956948369729,0.2955828375898555,-7.488115491774694],
+                rotation: [0,-0.6790385932163815,0,0.7341025738428641],
+                scale: [3.4640991272402513, 3.4640991272402513, 3.4640991272402513],
+                type: "2d",
+                textureType: "image",
+                textureLocation: "./assets/images/engelbart.jpg",
+                cardURL: "https://croquet.io",
+                behaviorModules: ["URLLink"],
+                fullBright: true,
+                frameColor: 0xcccccc,
+                color: 0xbbbbbb,
+                cornerRadius: 0.02,
                 shadow: true,
             }
         },
