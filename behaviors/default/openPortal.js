@@ -1,4 +1,4 @@
-class OpenRefineryPortalActor {
+class OpenBibliotekoPortalActor {
     setup() {
         this.addEventListener("pointerTap", "pressed");
     }
@@ -18,15 +18,15 @@ class OpenRefineryPortalActor {
         this.hasOpened = true;
 
         this.createCard({
-            translation: [-12, -0.4, -10.2],
-            rotation: [0, -1.5707963267948966, 0],
+            translation: [-10.732065903053343,-0.18894061754572794,-14.720254900468168],
+            rotation: [0.011278723121145175,-0.9994573359513909,0.0006223006415498912,-0.030942475007926296],
             layers: ["pointer"],
             className: "PortalActor",
             color: 16737996,
             cornerRadius: 0.05,
             depth: 0.05,
             frameColor: 8947848,
-            portalURL: "?world=factory",
+            portalURL: "?world=biblioteko",
             type: "2d",
             width: 1.8,
             height: 2.4,
@@ -36,7 +36,7 @@ class OpenRefineryPortalActor {
     }
 }
 
-class OpenRefineryPortalPawn {
+class OpenBibliotekoPortalPawn {
     setup() {
         this.addEventListener("pointerMove", "nop");
         this.addEventListener("pointerEnter", "hilite");
@@ -79,9 +79,9 @@ class OpenRefineryPortalPawn {
 export default {
     modules: [
         {
-            name: "OpenRefineryPortalButton",
-            actorBehaviors: [OpenRefineryPortalActor],
-            pawnBehaviors: [OpenRefineryPortalPawn]
+            name: "OpenBibliotekoPortalButton",
+            actorBehaviors: [OpenBibliotekoPortalActor],
+            pawnBehaviors: [OpenBibliotekoPortalPawn]
         }
     ]
 }

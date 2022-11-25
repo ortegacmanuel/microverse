@@ -9,7 +9,7 @@ export function init(Constants) {
 
     Constants.UserBehaviorDirectory = "behaviors/default";
     Constants.UserBehaviorModules = [
-        "lights.js", "text3D.js", "urlLink.js"
+        "lights.js", "text3D.js", "urlLink.js", "openPortal.js"
     ];
 
     const frameColor = 0x888888;
@@ -135,6 +135,14 @@ export function init(Constants) {
                 color: 0xbbbbbb,
                 cornerRadius: 0.02,
                 shadow: true,
+            }
+        },
+        {
+            card: {
+                name: "portal button",
+                translation: [-10.81629759288346,1.5781371821191166,-14.710318234147532],
+                behaviorModules: ["OpenBibliotekoPortalButton"],
+                type: "object",
             }
         },
     ];
