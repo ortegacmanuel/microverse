@@ -145,5 +145,25 @@ export function init(Constants) {
                 type: "object",
             }
         },
+        {
+            card: {
+                name: "text editor",
+                className: "TextFieldActor",
+                translation: [-13.086797873192362,-0.1513690345645784,8.035280996535503],
+                rotation: [0, 0, 0, 1],
+                depth: 0.05,
+                type: "text",
+                runs: [{text: "\nBonvenon al la Kiberspaco!\n"}],
+                margins: {left: 20, top: 20, right: 20, bottom: 20},
+                backgroundColor: 0xf4e056,
+                color: 0x000000,
+                //color: 0xf4e056,
+                frameColor: frameColor,
+                width: 2,
+                height: 2,
+                textScale: 0.002,
+                shadow: true,
+            }
+        },
     ];
 }

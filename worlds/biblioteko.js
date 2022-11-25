@@ -7,9 +7,9 @@ export function init(Constants) {
         "newwhite", "madhatter", "marchhare", "queenofhearts", "cheshirecat", "alice"
     ];
 
-    Constants.UserBehaviorDirectory = "behaviors/tutorial";
+    Constants.UserBehaviorDirectory = "behaviors/biblioteko";
     Constants.UserBehaviorModules = [
-        "lights.js"
+        "lights.js", "openPortal.js"
     ];
 
     const frameColor = 0x888888;
@@ -50,6 +50,14 @@ export function init(Constants) {
                 behaviorModules: ["Light"],
                 dataLocation: "./assets/sky/shanghai_riverside_2k.exr",
                 dataType: "exr",
+            }
+        },
+        {
+            card: {
+                name: "portal button",
+                translation: [-3.920201569294251,-0.17115430685939348,-0.19610941454184205],
+                behaviorModules: ["OpenGufujoPortalButton"],
+                type: "object",
             }
         },
     ];
