@@ -44,44 +44,43 @@ function createSettingsMenu(useEnter) {
         </div>
         -->
         <div id="joinPrompt">
-            <div id="joinPromptTitle">Settings</div>
-            <div id="joinPromptBlurb" class="promptBlurb">Specify a nickname, and choose an avatar either
-                by selecting from those on display or pasting a valid Ready Player Me URL.
+            <div id="joinPromptTitle">Agordoj</div>
+            <div id="joinPromptBlurb" class="promptBlurb">Entajpu vian kromnomon kaj elektu avataron.
             </div>
         </div>
-        <div id="settings-title" class="panel-title">Settings</div>
+        <div id="settings-title" class="panel-title">Agordoj</div>
         <div class="settings-container">
             <div id="nameInput" class="stringInputHolder">
-                <div id="namePrompt" class="namePrompt">Nickname<span>*</span></div>
+                <div id="namePrompt" class="namePrompt">Kromnomo<span>*</span></div>
                 <div id="nameField" class="nameField allow-select" contenteditable="true"></div>
-                <div id="nameExplanation">Enter 1-12 characters (ASCII only).</div>
+                <div id="nameExplanation">Entajpu 1-12 signojn (nur ASCII).</div>
                 <div id="nameFilterWarning"><br /></div>
             </div>
-            <div id="selectAvatar" class="namePrompt">Select Avatar</div>
+            <div id="selectAvatar" class="namePrompt">Elektu Avataron</div>
             <div id="dialogAvatarSelections">
                 <div id="avatarList"></div>
             </div>
             <div id="avatarURL" class="stringInputHolder">
-                <div id="avatarURLPrompt" class="namePrompt">Or, Enter an Avatar URL</div>
+                <div id="avatarURLPrompt" class="namePrompt">Aŭ, Entajpu Avataro-URLon</div>
                 <div id="avatarURLField" class="nameField avatarNameField allow-select" contenteditable="true"></div>
             </div>
             <div id="handednessRow">
-                <div id="handednessLabel">Hand:</div>
+                <div id="handednessLabel">Manprefero:</div>
                 <div class="btn-group" id="handedness">
                     <label class="btn btn-radio-button">
-                         <input type="radio" name="options" id="left"><span class="handedness-label">Left</span>
+                         <input type="radio" name="options" id="left"><span class="handedness-label">Maldesktra</span>
                     </label>
                     <label class="btn btn-radio-button">
-                        <input type="radio" name="options" id="right" checked><span class="handedness-label">Right</span>
+                        <input type="radio" name="options" id="right" checked><span class="handedness-label">Desktra</span>
                     </label>
                 </div>
             </div>
             <div id="dialogEnterButton" class="dialogButtonsHolder disabled">
-                <div id="enterButton">Enter</div>
+                <div id="enterButton">Eniri</div>
             </div>
             <div id="dialogAcceptCancelButtons" class="dialogButtonsHolder twoItems">
-                <button id="cancel-button" type="button" class="btn btn-danger cancel-button">Cancel</button>
-                <button type="button" id="acceptButton" class="btn btn-success">Apply</button>
+                <button id="cancel-button" type="button" class="btn btn-danger cancel-button">Nuligi</button>
+                <button type="button" id="acceptButton" class="btn btn-success">Konservi</button>
             </div>
         </div>
     </div>
@@ -402,18 +401,18 @@ function createShareMenu(avatar) {
     <div id="shareDialog" class="dialogPanel no-select">
         <button id="close-button" type="button" class="btn btn-danger btn-x topright">x</button>
         <div id="share-container" class="content-container">
-            <div id="share-title" class="panel-title">Share Session<br></div>
-            <div class="promptBlurb">Scan QR code or click to open a new browser tab<br> in the same session.</div>
+            <div id="share-title" class="panel-title">Kundividi seancon<br></div>
+            <div class="promptBlurb">Skanu la QR-kodon aŭ alklaku por malfermi novan retumilan langeton<br> en la sama seanco.</div>
             <div id="share-qr"></div>
 
-            <div class="share-settings-label">Copy Share Link</div>
+            <div class="share-settings-label">Kopii kundividan ligilon</div>
             <div class="share-menu-row">
-                <div id="copy-link" class="copy-link allow-select">generated link</div>
-                <button id="copy-button" type="button" class="btn btn-outline-success">Copy</button>
+                <div id="copy-link" class="copy-link allow-select">aŭtomate kreita ligilo</div>
+                <button id="copy-button" type="button" class="btn btn-outline-success">Kopii</button>
             </div>
             <div class="share-menu-row">
-                <div class="share-settings-label">Save world as VRSE file</div>
-                <button id="save-button" type="button" class="btn btn-outline-success">Download</button>
+                <div class="share-settings-label">Savi mondon kiel VRSE-dosieron</div>
+                <button id="save-button" type="button" class="btn btn-outline-success">Elŝuti</button>
             </div>
         </div>
     </div>`.trim();

@@ -63,12 +63,12 @@ export function connectFeedback(flag) {
     let connectIcon = document.getElementById('connectIcon')
 
     if (flag) {
-        connectButton.textContent = 'Connected';
+        connectButton.textContent = 'Konektita';
         connectButton.classList.add('connected');
         connectIcon.classList.remove('connect-icon');
         connectIcon.classList.add('connected-icon');
     } else {
-        connectButton.textContent = 'Connect';
+        connectButton.textContent = 'Konekti';
         connectButton.classList.remove('connected');
         connectIcon.classList.add('connect-icon');
         connectIcon.classList.remove('connected-icon');
@@ -144,27 +144,27 @@ function initWorldMenu(badge) {
     let buttons = `
 <div id="worldMenu-load" class="menu-label menu-item">
     <div class="menu-icon import-icon"></div>
-    <span class="menu-label-text">Import</span>
+    <span class="menu-label-text">Enporti</span>
 </div>
 <div id="worldMenu-connect" class="menu-label menu-item">
     <div class="menu-icon connect-icon" id="connectIcon"></div>
-    <span class="menu-label-text" id="connectBtn">Connect</span>
+    <span class="menu-label-text" id="connectBtn">Konekti</span>
 </div>
 <div id="worldMenu-gather" class="menu-label menu-item">
     <div class="menu-icon presentationMode-icon"></div>
-    <span class="menu-label-text">Gather</span>
+    <span class="menu-label-text">Grupigi</span>
 </div>
 <div id="worldMenu-shareButton" class="menu-label menu-item">
     <div class="menu-icon share-icon"></div>
-    <span class="menu-label-text">Share</span>
+    <span class="menu-label-text">Kundividi</span>
 </div>
 <div id="worldMenu-settings" class="menu-label menu-item">
     <div class="menu-icon settings-icon"></div>
-    <span class="menu-label-text">Settings</span>
+    <span class="menu-label-text">Agordoj</span>
 </div>
 <div id="worldMenu-helpButton" class="menu-label menu-item">
     <div class="menu-icon help-icon"></div>
-    <span class="menu-label-text">Help</span>
+    <span class="menu-label-text">Helpo</span>
 </div>
 `.trim();
 
@@ -201,9 +201,9 @@ function setMenuItems(myAvatar) {
     let label = gatherItem.querySelector("span");
 
     if (myAvatar.actor.service("PlayerManager").presentationMode) {
-        label.textContent = "Stop Gathering";
+        label.textContent = "Ĉesi grupigi";
     } else {
-        label.textContent = "Gather";
+        label.textContent = "Grupigi";
     }
 
     let div;

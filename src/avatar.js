@@ -822,6 +822,8 @@ export class AvatarPawn extends mix(CardPawn).with(PM_Player, PM_SmoothedDriver,
 
         this.shellListener = (command, { frameType, spec, cameraMatrix, dx, dy, acknowledgeReceipt }) => {
             let handlerModuleName = this.actor._cardData.avatarEventHandler;
+            console.log("translation:" + this.actor._translation);
+            console.log("rotation: " + this.actor._rotation);
             switch (command) {
                 case "frame-type":
                     const isPrimary = frameType === "primary";
@@ -1174,17 +1176,17 @@ export class AvatarPawn extends mix(CardPawn).with(PM_Player, PM_SmoothedDriver,
         // TODO: change PlayerManager to only create avatars for players that are actually in the world
         let total = manager.players.size;
         let here = manager.playersInWorld().length;
-        let suffix = here === 1 ? "user" : "users";
-        let tooltip = `${here} ${here === 1 ? "user is" : "users are"} in this world`;
+        let suffix = here === 1 ? "uzanto" : "uzantoj";
+        let tooltip = `${here} ${here === 1 ? "uzanto estas" : "uzantoj estas"} en tiu ĉi mondo`;
         if (here !== total) {
             let watching = total - here;
-            tooltip += `, ${watching} ${watching === 1 ? "user has" : "users have"} not entered yet`;
+            tooltip += `, ${watching} ${watching === 1 ? "uzanto ankoraŭ ne eniris" : "uzantoj ankoraŭ ne eniris"}`;
             total = `${here}+${watching}`;
         }
         if (manager.presentationMode) {
             let followers = manager.followers.size; // includes the presenter
             readout.textContent = `${followers}/${total} ${suffix}`;
-            tooltip = `${followers} ${followers === 1 ? "user" : "users"} in guided tour, ${tooltip}`;
+            tooltip = `${followers} ${followers === 1 ? "uzanto" : "uzantoj"} en la gvidata vizito, ${tooltip}`;
         } else {
             readout.textContent = `${total} ${suffix}`;
         }
