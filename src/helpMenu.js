@@ -96,7 +96,7 @@ function createHelpMenu() {
                      </tr>
                      <tr class="help-row">
                          <td>
-                             <p class="table-head">Kundividi</p>
+                             <p class="table-head">Inviti</p>
                              <p class="table-desc">Konservu vian metaverson kiel .vrse-dosieron por kundivido aŭ uzu la QR-kodon por kundividi la seancon kun aliaj.</p>
                          </td>
                          <td class="icon-column">

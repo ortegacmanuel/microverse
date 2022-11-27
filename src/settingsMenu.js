@@ -401,8 +401,8 @@ function createShareMenu(avatar) {
     <div id="shareDialog" class="dialogPanel no-select">
         <button id="close-button" type="button" class="btn btn-danger btn-x topright">x</button>
         <div id="share-container" class="content-container">
-            <div id="share-title" class="panel-title">Kundividi seancon<br></div>
-            <div class="promptBlurb">Skanu la QR-kodon aŭ alklaku por malfermi novan retumilan langeton<br> en la sama seanco.</div>
+            <div id="share-title" class="panel-title">Inviti uzantojn<br></div>
+            <div class="promptBlurb">Skanu la QR-kodon aŭ alklaku por malfermi novan retumilan langeton en la sama seanco.</div>
             <div id="share-qr"></div>
 
             <div class="share-settings-label">Kopii kundividan ligilon</div>

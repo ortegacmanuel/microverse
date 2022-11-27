@@ -424,6 +424,9 @@ class MyModelRoot extends ModelRoot {
         }
 
         this.loadBehaviorModules(Constants.Library.modules, "1");
+        if (Constants.ShowCaseSpec) {
+            this.publish(this.sessionId, "disableCodeLoadFlag");
+        }
         this.load(Constants.DefaultCards, "1");
     }
 
@@ -665,7 +668,10 @@ class MyViewRoot extends ViewRoot {
             BehaviorViewManager,
             WalkManager,
         ];
-        if (window.settingsMenuConfiguration?.voice) services.push(DolbyChatManager);
+        if (window.settingsMenuConfiguration?.voice ||
+            Constants.ShowCaseSpec && Constants.ShowCaseSpec.voiceChat) {
+            services.push(DolbyChatManager);
+        }
         return services;
     }
 
@@ -738,10 +744,10 @@ function startWorld(appParameters, world) {
         options: {world},
         // developer can override defaults
         ...appParameters,
-        // except for the 'microverse' flag
-        // which identifies microverse sessions for billing
-        flags: ["microverse"],
     };
+    // identify microverse sessions per flags
+    if (!Array.isArray(sessionParameters.flags)) sessionParameters.flags = [];
+    if (!sessionParameters.flags.includes("microverse")) sessionParameters.flags.push("microverse");
 
     // remove portal and broadcast parameters from url for QR code
     App.sessionURL = deleteParameter(App.sessionURL, "portal");
